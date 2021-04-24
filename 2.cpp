@@ -9,7 +9,7 @@ int main(int argc, char **argv)
         int n = s.find("mephi");
         s.replace(n, 5, "yandex");
     }
-    cout << "Èñïðàâëåííûé òåêñò:" << endl;
+    cout << "Ð˜ÑÐ¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð½Ñ‹Ð¹ Ñ‚ÐµÐºÑÑ‚:" << endl;
     cout << s << endl;
     return 0;
 }
