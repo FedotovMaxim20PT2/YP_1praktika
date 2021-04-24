@@ -4,19 +4,19 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-cout « "Ââåäèòå ëþáîå ÷èñëî â äèàïîçîíå îò 1 äî 100" « endl;
+cout Â« "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð»ÑŽÐ±Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð² Ð´Ð¸Ð°Ð¿Ð¾Ð·Ð¾Ð½Ðµ Ð¾Ñ‚ 1 Ð´Ð¾ 100" Â« endl;
 int x;
-cin » x;
+cin Â» x;
 if (x >0 && x <101) {
-string y = "Â êàðàâàíå áûë";
-string z = "âåðáëþä";
+string y = "Ð’ ÐºÐ°Ñ€Ð°Ð²Ð°Ð½Ðµ Ð±Ñ‹Ð»";
+string z = "Ð²ÐµÑ€Ð±Ð»ÑŽÐ´";
 if ((x % 10==1) && (x != 11)) {
-cout « y + " " + to_string(x) + z « endl;
+cout Â« y + " " + to_string(x) + z Â« endl;
 }else if ((x%10 <= 4) && (x/10!=1)) {
-cout « y.append("î") + to_string(x) + z.append("à") « endl;
-}else cout « y.append("î") + to_string(x) + z.append("îâ") « endl;
+cout Â« y.append("Ð¾") + to_string(x) + z.append("Ð°") Â« endl;
+}else cout Â« y.append("Ð¾") + to_string(x) + z.append("Ð¾Ð²") Â« endl;
 } else {
-cout « "Ââåä¸ííîå ÷èñëî íå âõîäèò â äèàïàçîí îò 1 äî 100" « endl;;
+cout Â« "Ð’Ð²ÐµÐ´Ñ‘Ð½Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð½Ðµ Ð²Ñ…Ð¾Ð´Ð¸Ñ‚ Ð² Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½ Ð¾Ñ‚ 1 Ð´Ð¾ 100" Â« endl;;
 }
 return 0;
 }
