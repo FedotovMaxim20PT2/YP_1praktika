@@ -11,7 +11,7 @@ wstring encrypt(const std::wstring& text, const int key)
  len=text1.length();
  wcout<<len<<endl;
  for(i=0; i< len; i++) {
- if ((text1[i]+key1) > L'ß')
+ if ((text1[i]+key1) > L'ÃŸ')
  shifr += text1[i]+key1-32;
  else
  shifr +=text1[i]+key1;
@@ -23,7 +23,7 @@ int main()
  locale loc("ru_RU.UTF-8");
  locale::global(loc);
  int key;
- wstring text=L"ÇÅËÅÍÎÃËÀÇÎÅÒÀÊÑÈ";
+ wstring text=L"Ð—Ð•Ð›Ð•ÐÐžÐ“Ð›ÐÐ—ÐžÐ•Ð¢ÐÐšÐ¡Ð˜";
  wstring text2 = L"";
  wstring untext;
  for(wchar_t & text1: text) {
@@ -32,7 +32,7 @@ int main()
  cin>>key;
  wcout << text2 << endl;
  untext=encrypt(text2,key);
- wcout<<L"Íà÷àëüíîå:"<<text<<endl;
- wcout<<L"Çàøèôðîâàííîå:"<<untext<<endl;
+ wcout<<L"ÐÐ°Ñ‡Ð°Ð»ÑŒÐ½Ð¾Ðµ:"<<text<<endl;
+ wcout<<L"Ð—Ð°ÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ð½Ð½Ð¾Ðµ:"<<untext<<endl;
  return 0;
-}
+}
