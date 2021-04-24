@@ -8,8 +8,8 @@ wstring decrypt(const wstring text, const int key)
  wstring s = L"";
  wstring unshifr;
  for (wchar_t c : text) {
- if (!(c>= L'À' && c<=L'ß')) return L"-1";
- if ((c+key) > L'ß')
+ if (!(c>= L'Ã€' && c<=L'ÃŸ')) return L"-1";
+ if ((c+key) > L'ÃŸ')
  unshifr += c-key-32;
  else
  unshifr += c-key;
@@ -21,7 +21,7 @@ int main()
  locale loc("ru_RU.UTF-8");
  locale::global(loc);
  int key;
- wstring text=L"ÊÈÎÈÐÑÆÎÃÊÑÈÕÃÍÔË";
+ wstring text=L"ÐšÐ˜ÐžÐ˜Ð Ð¡Ð–ÐžÐ“ÐšÐ¡Ð˜Ð¥Ð“ÐÐ¤Ð›";
  wstring text2 = L"";
  wstring untext;
  for(wchar_t & text1: text) {
@@ -30,7 +30,7 @@ int main()
  cin>>key;
  untext=decrypt(text2,key);
  if(untext==(L"-1")) wcout<<L"ERROR"<<endl;
- wcout<<L"Íà÷àëüíîå:"<<text<<endl;
- wcout<<L"Ðàñøèôðîâàííîå:"<<untext<<endl;
+ wcout<<L"ÐÐ°Ñ‡Ð°Ð»ÑŒÐ½Ð¾Ðµ:"<<text<<endl;
+ wcout<<L"Ð Ð°ÑÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ð½Ð½Ð¾Ðµ:"<<untext<<endl;
  return 0;
 }
